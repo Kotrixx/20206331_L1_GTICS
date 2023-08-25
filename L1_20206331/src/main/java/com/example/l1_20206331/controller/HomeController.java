@@ -12,7 +12,7 @@ public class HomeController {
 
 
     @GetMapping(value = "")
-    public String principal(@RequestParam("code") String code){
+    public String principal(@RequestParam(name = "code", required = false) String code){
         if(code.equals(null)){
             return "index";
         }
