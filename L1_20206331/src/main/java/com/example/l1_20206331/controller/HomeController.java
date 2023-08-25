@@ -10,14 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(value ="/principal")
 public class HomeController {
 
-
+    
     @GetMapping(value = "")
-    public String principal(){
-        return "index";
-    }
-    @GetMapping(value = "/")
     public String principal2(@RequestParam(name = "code", required = false) String code){
-        if(code.equals(null)){
+        if(code.equals(null) || code.isEmpty()){
             return "index";
         }
         else{
