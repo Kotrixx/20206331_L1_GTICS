@@ -12,7 +12,11 @@ public class HomeController {
 
 
     @GetMapping(value = "")
-    public String principal(@RequestParam(name = "code", required = false) String code){
+    public String principal(){
+        return "index";
+    }
+    @GetMapping(value = "/")
+    public String principal2(@RequestParam(name = "code", required = false) String code){
         if(code.equals(null)){
             return "index";
         }
@@ -20,6 +24,5 @@ public class HomeController {
             return "indexPucp";
         }
     }
-
 
 }
