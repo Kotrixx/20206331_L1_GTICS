@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value ="/principal")
 public class HomeController {
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "")
     public String principal(){
         return "index";
     }
